@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CSS combinators</title>
+    <style>
+      .big {
+        font-size: 200%;
+      }
+      .blue {
+        color: blue;
+      }
+      .big.blue {
+        text-decoration:underline;
+      }
+      p.small {
+        font-size: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>No space combinator</h1>
+    <div class="blue">Blue text</div>
+    <div class="big">Big text</div>
+    <div class="big blue">Big blue text</div>
+    <div class="small">No match</div>
+    <p class="small">Small text</p>
+  </body>
+</html>
+
