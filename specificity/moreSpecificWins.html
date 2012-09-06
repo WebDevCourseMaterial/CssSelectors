@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>more specific</title>
+    <style>
+      #my-title {
+        color: green;
+      }
+      .info {
+        color: red;
+      }
+      .info {
+        color: blue;
+      }
+      body > #my-title.info {
+        color: magenta
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="my-title" class="info">
+      Hello, World!
+    </h1>
+  </body>
+</html>
