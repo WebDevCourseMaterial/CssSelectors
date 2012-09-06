@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Exercise 1</title>
+    <style>
+	  #target {
+	    color: #222;
+	    font: 12px arial,sans-serif;
+	    font-weight: 600;
+	    display: inline-block;
+	    background: #eee;
+	    padding: 5px 27px 5px 8px;
+	    position: relative;
+	    border: solid 1px rgba(100,100,100, .4);
+	    box-shadow: inset 0 0 6px rgba(150,150,100, .3);
+	    border-radius: 2px;
+	  }
+	  /* TODO: Add after pseudo element */ {
+	    position: absolute;
+	    content: '';
+	    height: 0px;
+	    width: 0px;
+	    border: 4px solid #000;
+	    margin-left: 7px;
+	    border-color: transparent;
+	    border-top-color: #666;
+	    line-height: 20px;
+	    top: 9px;
+	  }
+	  #popup.closed { 
+	    display: none;
+	  }
+	  #popup {
+	    font: 14px/2em arial,sans-serif;
+	    margin-left: 2px;
+	    position: absolute;
+	    width: 200px;
+	    box-shadow: 0 0 0 1px #bbb;
+	  }
+	  ul {
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;
+	  }
+	  li {
+	    padding: 0 15px;
+	  }
+	  /* TODO: Add hover and active rules. */
+	</style>
+  </head>
+  <body>
+    <div id='target'>Fisher classes</div>
+      <div id='popup'>
+        <ul>
+          <li>WebDev</li>
+          <li>Android Development</li>
+          <li>iOS Development</li>
+          <li>Mechatronics</li>
+          <li>ROBO Capstone</li>
+          <li>Robotics Engineering</li>
+          <li>Computer Aided Machining</li>
+    </ul>
+  </div>
+  <script>
+  document.getElementById('target').addEventListener('click', function() {
+    var popup = document.getElementById('popup');
+    if (popup.classList.contains('closed')) {
+      popup.classList.remove('closed');
+    } else {
+      popup.classList.add('closed');
+    }
+  });
+  </script>
+  </body>
+</html>

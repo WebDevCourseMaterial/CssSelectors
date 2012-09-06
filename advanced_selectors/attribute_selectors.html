@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Attribute selectors</title>
+    <style>
+      input[type] {
+        color: blue;
+      }
+      input[type=button] {
+        color: red;
+      }
+      [value="US"] {
+        color: blue;
+      }
+      [value="CN"] {
+        color: green;
+      }
+      [value="IE"] {
+        color: magenta;
+      }
+      [src^="http://www.rose-hulman.edu"] {
+        border: 4px solid yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <hr>
+    First name: <input type="text"><br>
+    Last name: <input type="text"><br>
+    <hr>
+    <button type="button">Button tag</button>
+    <input type="button" value="Input tag button type">
+    <hr>
+    <select>
+      <option value="JP">Japan</option>
+      <option value="US">US</option>
+      <option value="CN">China</option>
+      <option value="IE">Ireland</option>
+    </select>
+    <hr>
+    <div style="height: 70px;"></div>
+    <hr>
+    <img width="200px" src="http://www.rose-hulman.edu/media/78/logo_rhit.png" alt="Rose-Hulman logo">
+    <hr>
+    <img width="200px" src="https://www.google.com/images/srpr/logo3w.png" alt="Google logo img scr link taken 9/1/2012">
+    <hr>
+  </body>
+</html>
