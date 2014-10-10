@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>CSS combinators</title>
+    <style>
+      div~span {
+        color: magenta;
+      }
+    </style>
+  </head>
+  <body style="font: 18px/24px consolas">
+    <h1>Any sibling combinator</h1>
+    <div class="main">
+      Main div
+      <div>&nbsp;- Div element</div>
+      <article>&nbsp;- Article element</article>
+      <span>
+        &nbsp;- Span element
+      </span>
+   	  <div>
+        &nbsp;- Div element
+      </div>
+      <span>
+        &nbsp;- Span element
+      </span>
+    </div>
+  </body>
+</html>
+
