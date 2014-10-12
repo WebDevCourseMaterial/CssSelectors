@@ -5,19 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Exercise 2</title>
     <style>
-      [checked] {
-        width: 100px;
-      }
-      [type=button] {
-        color: blue;
+      [checked]+span::after{
+	    font: italic 11px arial, sans-serif;
+	    content: " (initially checked)";
       }
       [type] {
         border: 1px dashed red;
       }
+      [type=button] {
+        color: blue;
+      }
       [value=Keegan] {
         color: magenta;
       }
-      [value=male] {
+      button~hr+input {
         margin-left: 100px;
       }
     </style>
@@ -30,11 +31,11 @@
     <button>Button tag</button>
     <input type="button" value="Input tag button type">
     <hr>
-    <input type="radio" name="sex" value="male"> Male<br />
-    <input type="radio" name="sex" value="female"> Female
+    <input type="radio" name="sex" value="male" checked> <span>Male</span><br>
+    <input type="radio" name="sex" value="female"> <span>Female</span>
     <hr>
-    <input type="checkbox" name="vehicle" checked="checked"> I have a bike<br />
-    <input type="checkbox" name="vehicle"> I have a car 
+	<input type="checkbox" name="vehicle"> <span>I have a car</span><br>
+    <input type="checkbox" name="vehicle" checked> <span>I have a bike</span><br>
     <hr>
   </body>
 </html>

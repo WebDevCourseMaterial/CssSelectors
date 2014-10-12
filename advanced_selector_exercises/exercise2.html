@@ -5,7 +5,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Exercise 2</title>
     <style>
-      /* TODO: Create rules using only attribute selectors. */
+      /* Add a selector that will match any element with the type attribute */ {
+        border: 1px dashed red;
+      }
+      /* Add a selector that will match any element with the type attribute equal to button */ {
+        color: blue;
+      }
+      /* Add a selector that will match any element with the value attribute equal to Keegan */ {
+        color: magenta;
+      }
+      /* Add a rule to create content AFTER a span that is a sibling directly after an input with the checked attribute */ {
+	    font: italic 11px arial, sans-serif;
+	    content: " (initially checked)";
+      }
+	  /* Add a selector that will match any input that is a sibling directly after an hr that came after a button */
+      button~hr+input {
+        margin-left: 100px;
+      }
     </style>
   </head>
   <body>
@@ -16,11 +32,11 @@
     <button>Button tag</button>
     <input type="button" value="Input tag button type">
     <hr>
-    <input type="radio" name="sex" value="male"> Male<br />
-    <input type="radio" name="sex" value="female"> Female
+    <input type="radio" name="sex" value="male" checked> <span>Male</span><br>
+    <input type="radio" name="sex" value="female"> <span>Female</span>
     <hr>
-    <input type="checkbox" name="vehicle" checked="checked"> I have a bike<br />
-    <input type="checkbox" name="vehicle"> I have a car 
+	<input type="checkbox" name="vehicle"> <span>I have a car</span><br>
+    <input type="checkbox" name="vehicle" checked> <span>I have a bike</span><br>
     <hr>
   </body>
 </html>
