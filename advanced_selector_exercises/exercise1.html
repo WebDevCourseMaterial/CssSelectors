@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Exercise 1</title>
     <style>
-	  #target {
+	  /* Add a selector to match the target div that uses only the id */ {
 	    color: #222;
 	    font: 12px arial,sans-serif;
 	    font-weight: 600;
@@ -17,7 +17,15 @@
 	    box-shadow: inset 0 0 6px rgba(150,150,100, .3);
 	    border-radius: 2px;
 	  }
-	  /* TODO: Add after pseudo element */ {
+	  /* Add a selector to match the target div when it being clicked, i.e. active (Hint: Pseudo class) */ {
+	    color: #00E;
+	  }
+	  /* Add a selector to match the target div when it HAS the class closed */ {
+	    font-weight: 800;
+	    background: #ddd;
+	    box-shadow: inset 0 0 12px rgba(150,150,100, .3);
+	  }
+	  /* Add a selector to create content AFTER the target div (Hint: Pseudo element) */ {
 	    position: absolute;
 	    content: '';
 	    height: 0px;
@@ -29,49 +37,58 @@
 	    line-height: 20px;
 	    top: 9px;
 	  }
-	  #popup.closed { 
+	  /* Add a selector to match the div that is the sibling directly after
+	     the target div IF the target div has the class closed present */ { 
 	    display: none;
-	  }
-	  #popup {
+	  }	  
+	  /* Add a selector to match the div that is the sibling directly after
+	     the target div that does not look for any class being present */ {
 	    font: 14px/2em arial,sans-serif;
 	    margin-left: 2px;
 	    position: absolute;
 	    width: 200px;
 	    box-shadow: 0 0 0 1px #bbb;
 	  }
-	  ul {
+	  
+	  /* Add a selector to match all unordered lists */ {
 	    list-style: none;
 	    margin: 0;
 	    padding: 0;
 	  }
-	  li {
+	  /* Add a selector to match all list items */ {
 	    padding: 0 15px;
 	  }
-	  /* TODO: Add hover and active rules. */
+	  /* Add a selector to match all list items when they are being hovered over */ {
+	    background: #eee;
+	  }
+	  /* Add a selector to match all list items when they are being clicked (active) */ {
+	    background: yellow;
+	  }
 	</style>
   </head>
   <body>
-    <div id='target'>Fisher classes</div>
-      <div id='popup'>
-        <ul>
-          <li>WebDev</li>
-          <li>Android Development</li>
-          <li>iOS Development</li>
-          <li>Mechatronics</li>
-          <li>ROBO Capstone</li>
-          <li>Robotics Engineering</li>
-          <li>Computer Aided Machining</li>
-    </ul>
-  </div>
-  <script>
-  document.getElementById('target').addEventListener('click', function() {
-    var popup = document.getElementById('popup');
-    if (popup.classList.contains('closed')) {
-      popup.classList.remove('closed');
-    } else {
-      popup.classList.add('closed');
-    }
-  });
-  </script>
+    <div id="target" class="closed">Fisher classes</div>
+    <div>
+      <ul>
+        <li>WebDev</li>
+        <li>Android Development</li>
+        <li>iOS Development</li>
+        <li>Mechatronics</li>
+        <li>ROBO Capstone</li>
+        <li>Robotics Engineering</li>
+        <li>Computer Aided Machining</li>
+      </ul>
+    </div>
+    <script>
+	  /* I had to cheat and use a little JavaScript for this exercise.
+          This JavaScript is in a non-jQuery version.  Optional: Could you rewrite it in jQuery in 3 lines? :) */
+	  document.getElementById('target').addEventListener('click', function() {
+		if (this.classList.contains('closed')) {
+		  this.classList.remove('closed');
+		} else {
+		  this.classList.add('closed');
+		}
+	  });
+    </script>
   </body>
 </html>
