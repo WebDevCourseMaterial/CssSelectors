@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Media query demo</title>
+    <style>
+		body {
+		    background-color: red;
+		}
+		@media screen and (min-width: 500px) {
+		    body {
+		        background-color: orange;
+		    }
+		}
+		@media screen and (min-width: 600px) {
+		    body {
+		        background-color: yellow;
+		    }
+		}
+		@media screen and (min-width: 700px) {
+		    body {
+		        background-color: green;
+		    }
+		}
+		@media screen and (min-width: 800px) {
+		    body {
+		        background-color: blue;
+		    }
+		}
+		@media screen and (min-width: 900px) {
+		    body {
+		        background-color: purple;
+		    }
+		}
+    </style>
+  </head>
+  <body>
+    <h1>Width Media query</h1>
+    <ul>
+		<li>Red less than 500</li>
+		<li>@500 goes Orange</li>
+		<li>@600 goes Yellow</li>
+		<li>@700 goes Green</li>
+		<li>@800 goes Blue</li>
+		<li>@900 goes Purple</li>
+    </ul>
+  </body>
+</html>
+
+
